@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio Card</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
+</head>
+<style>
+    * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    body {
+        font-family: Arial, sans-serif;
+        background: linear-gradient(135deg, blue, purple);
+        min-height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding: 20px;
+    }
+
+    .card {
+        font-weight: bold;
+        background:pink;
+        width: 450px;
+        max-width: 100%;
+        padding: 30px 20px;
+        text-align: center;
+        border-radius: 20px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s;
+    }
+
+    .card:hover {
+        transform: translateY(-8px);
+    }
+
+    .profile-img {
+        width: 210px;
+        height: 210px;
+        border-radius: 50%;
+        border: 4px solid #2563eb;
+        margin-bottom: 15px;
+    }
+
+    h1 {
+        font-size: 24px;
+        color: black;
+        margin-bottom: 10px;
+    }
+
+    h3 {
+        font-size: 16px;
+        color: #2563eb;
+        margin-bottom: 15px;
+    }
+
+    p {
+        color: black;
+        line-height: 1.6;
+        margin-bottom: 18px;
+    }
+
+    .education {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    
+    .projects {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+    
+    .skills {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 8px;
+        margin-bottom: 20px;
+        text-transform: uppercase;
+        font-weight: bold;
+    }
+
+    .skills span {
+        background: silver;
+        color: solid black;
+        padding: 7px 10px;
+        border-radius: 15px;
+        font-size: 12px;
+    }
+
+    button {
+        background: #2563eb;
+        color: white;
+        border: none;
+        padding: 10px 14px;
+        margin: 5px 2px;
+        border-radius: 8px;
+        cursor: pointer;
+    }
+
+    button:hover {
+        background: #1e3a8a;
+    }
+
+    #message {
+        margin-top: 15px;
+        overflow-wrap: anywhere;
+        font-size: 14px;
+    }
+</style>
+
+<body>
+    <div class="card">
+        <img src="images.jpeg" alt="Profile photo" class="profile-img">
+        <div class="card-content">
+            <h1>C ASWATHKANNA</h1>
+            <h3>Frontend Developer | Full Stack web Developer</h3>
+        </div>
+        <div class="education">
+            <h1>Education</h1>
+            <p>Bachelor of Degree in Computer Science and Engineering</p>
+            <p>Bachelor of Degree from Shree venkateswara HI-tech Engineering College</p>
+        </div>
+        <div class="skills">
+            <span>HTML</span>
+            <span>CSS</span>
+            <span>JavaScript</span>
+            <span>React.js</span>
+            <span>jQuery</span>
+            <span>Django</span>
+            <span>Python</span>
+            <span>SQL</span>
+            <span>Bootstrap</span>
+        </div>
+        <div class="projects">
+            <h1>Projects</h1>
+            <ul>
+                <p>Task Management Application</p>
+                <p>Python Login System</p>
+                <p>Weather Forecast Application</p>
+                <p>AI Sentence Generator</p>
+            </ul>
+        </div>
+        <button onclick="resume()">Resume</button>
+        <button onclick="contactMe()">Contact Me</button>
+        <p id="message"></p>
+    </div>
+    <script>
+        function resume() {
+            document.getElementById("message").innerText ='Resume: <a href="E:\RESUME\C. ASWATHKANNA-2.pdf">Here is my resume.</a>';
+               
+        }
+        function contactMe() {
+            document.getElementById("message").innerHTML =
+                'Email: <a href="mailto:caswath2001@gmail.com">caswath2001@gmail.com</a><br>' +
+                'LinkedIn: <a href="https://www.linkedin.com/in/aswathkanna">Here is my LinkedIn profile.</a><br>' +
+                'Github: <a href="https://github.com/aswathkanna220chandrasekar">Here is my github profile.</a>';
+        }
+    </script>
+</body>
+
+</html>
